@@ -17,19 +17,19 @@ public class InputManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || SwipeInput.swipedRight)
         {
             gameManager.Move(MoveDirection.Right);
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) || SwipeInput.swipedLeft)
         {
             gameManager.Move(MoveDirection.Left);
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow) || SwipeInput.swipedUp)
         {
             gameManager.Move(MoveDirection.Up);
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow) || SwipeInput.swipedDown)
         {
             gameManager.Move(MoveDirection.Down);
         }
